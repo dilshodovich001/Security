@@ -1,0 +1,23 @@
+POST http://localhost:8081/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="men.jpg"
+
+< C:\Users\Ma'ruf Raufov\OneDrive\Pictures\men.jpg
+
+### show images
+GET http://localhost:8081/attach/open/c5edd0ea-df7f-4978-8d3f-e2248dbe2f68
+
+
+### pagination
+GET http://localhost:8081/attach/pagination?page=0&size=5
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA1OTA4MjEsImlkIjozLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2NzA2NzcyMjEsImlzcyI6Ik1hemdpIn0.gna-rhUPJcWZx5C7sKml3dAgQg7kSL3s8n2YXAHNdShPZ4ECPFB9Xu1GFlX_U2PY4EvuH9Tg9Yq4QeX8OILrIw
+
+### Delete
+DELETE http://localhost:8081/attach/delete?id=67b835db-3f18-4325-b871-6c708c21e813&data=2022/12/7
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA0MTMyMDYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2NzA0OTk2MDYsImlzcyI6Ik1hemdpIn0.ur1mOqVO8xwOIRUuDsrdt05NUWbzLsnrCiwRIO4e3TDATPPCO7KvPYjttwQ8S72Fd7wGCLE48AA6CJpp0lrdxA
+
+
+### dowloand
+GET http://localhost:8081/attach/download/67b835db-3f18-4325-b871-6c708c21e813

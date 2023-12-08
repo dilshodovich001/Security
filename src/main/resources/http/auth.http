@@ -1,0 +1,19 @@
+POST localhost:8081/api/v1/auth/register
+Content-Type:application/json
+
+{
+  "firstname": "Maruf",
+  "lastname": "Raufov",
+  "email": "raufovmaruf777@gmail.com",
+  "password": "ummat!@#$077"
+}
+
+
+### token
+POST localhost:8081/api/v1/auth/authenticate
+Content-Type: application/json
+
+{
+  "email": "raufovmaruf777@gmail.com",
+  "password": "ummat!@#$077"
+}
