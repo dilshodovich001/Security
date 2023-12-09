@@ -1,11 +1,11 @@
 ### Registration ###
-POST http://localhost:8081/auth/registration
+POST http://localhost:8082/auth/registration
 Content-Type: application/json
 
 {
   "name": "Alijon",
   "surname": "Alliyev",
-  "phone": "33333",
+  "phone": "3333333",
   "password": "7777",
   "email": "raufovmaruf444@gmail.com"
 }
@@ -17,15 +17,15 @@ POST http://localhost:8082/auth/login
 Content-Type: application/json
 
 {
-  "phone": "33333",
+  "phone": "3333333",
   "password": "7777"
 }
 
 ### Authorization Admin token
-POST localhost:8081/auth/login
+POST localhost:8082/auth/login
 Content-Type: application/json
 
 {
-  "phone": "9999",
-  "password": "7777"
+  "phone": "+998932222077",
+  "password": "111111"
 }

@@ -49,9 +49,8 @@ public class SecurityConfig {
         http.cors().disable().csrf().disable();
         http.authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll()
-                .requestMatchers("/auth/login").permitAll()
                 .requestMatchers("/attach/**").permitAll()
-                .requestMatchers("/region/**").hasRole("ADMIN")
+                .requestMatchers("/profile/**").hasRole("ADMIN")
                 .requestMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated().and().addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         http.exceptionHandling().authenticationEntryPoint(authEntryPointJwt);
