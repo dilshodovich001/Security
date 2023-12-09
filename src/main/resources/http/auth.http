@@ -1,19 +1,31 @@
-POST localhost:8081/api/v1/auth/register
-Content-Type:application/json
-
-{
-  "firstname": "Maruf",
-  "lastname": "Raufov",
-  "email": "raufovmaruf777@gmail.com",
-  "password": "ummat!@#$077"
-}
-
-
-### token
-POST localhost:8081/api/v1/auth/authenticate
+### Registration ###
+POST http://localhost:8081/auth/registration
 Content-Type: application/json
 
 {
-  "email": "raufovmaruf777@gmail.com",
-  "password": "ummat!@#$077"
+  "name": "Alijon",
+  "surname": "Alliyev",
+  "phone": "33333",
+  "password": "7777",
+  "email": "raufovmaruf444@gmail.com"
+}
+
+
+
+### Authorization user token
+POST http://localhost:8082/auth/login
+Content-Type: application/json
+
+{
+  "phone": "33333",
+  "password": "7777"
+}
+
+### Authorization Admin token
+POST localhost:8081/auth/login
+Content-Type: application/json
+
+{
+  "phone": "9999",
+  "password": "7777"
 }

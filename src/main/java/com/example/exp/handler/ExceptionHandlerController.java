@@ -1,9 +1,8 @@
 package com.example.exp.handler;
 
 
-import com.example.exp.AlreadyExistsException;
-import com.example.exp.EmailAlreadyExistsException;
-import com.example.exp.ItemNotFoundException;
+
+import com.example.exp.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +17,14 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler({
             AlreadyExistsException.class,
-            EmailAlreadyExistsException.class,
-            ItemNotFoundException.class
+            ItemNotFoundException.class,
+            UserNotFoundException.class,
+            TokenException.class,
+            ProfileCreateException.class,
+            PasswordOrEmailWrongException.class,
+            MessageSendException.class,
+            ItemAlreadyExistException.class
+
 
     })
     public ResponseEntity<?> handlerExc(RuntimeException runtimeException) {

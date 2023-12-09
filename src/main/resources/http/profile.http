@@ -1,0 +1,6 @@
+POST localhost:8081/profile/profile_role/5
+Content-Type: application/json
+
+{
+  "role": "MODERATOR"
+}

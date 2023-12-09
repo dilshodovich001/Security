@@ -1,33 +1,42 @@
 package com.example.controller;
 
-import com.example.dto.auth.AuthenticationRequestDTO;
-import com.example.dto.auth.AuthenticationResponseDTO;
-import com.example.dto.auth.RegisterRequestDTO;
+
+import com.example.dto.auth.AuthRegistrationDTO;
+import com.example.dto.auth.AuthRequestDTO;
+import com.example.dto.auth.AuthResponseDTO;
 import com.example.service.AuthService;
-import com.example.service.EmailService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
-@RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
+@RequestMapping("/auth")
 public class AuthController {
-
     private final AuthService authService;
-    private final EmailService emailService;
 
-    @PostMapping("/register")
-    public ResponseEntity<RegisterRequestDTO> register(@RequestBody RegisterRequestDTO request){
-        return ResponseEntity.ok(authService.register(request));
-    }
-    @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponseDTO> authenticate(@RequestBody AuthenticationRequestDTO request){
-        return ResponseEntity.ok(authService.authenticate(request));
-    }
-    @GetMapping("/verification/email/{jtwToken}")
-    public ResponseEntity<String> emailVerification(@PathVariable("jtwToken") String jwt) {
-        String response =emailService.verification(jwt);
+
+    @PostMapping("/registration")
+    public ResponseEntity<String> registration(@RequestBody AuthRegistrationDTO dto){
+        log.info("Registration --> " + dto);
+        String response = authService.registration(dto);
         return ResponseEntity.ok(response);
     }
+
+    @PostMapping("/login")
+    private ResponseEntity<AuthResponseDTO> login(@RequestBody AuthRequestDTO dto){
+        log.info("Authorization --> "+dto);
+        AuthResponseDTO response  = authService.login(dto);
+        return ResponseEntity.ok(response);
+    }
+
+
+
+
 }

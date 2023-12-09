@@ -1,5 +1,5 @@
 package com.example.enums;
 
 public enum ProfileStatus {
-    ACTIVE,BLOCK
+    ACTIVE, NOT_ACTIVE, BLOCK
 }

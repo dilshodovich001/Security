@@ -44,28 +44,7 @@ public class AttachService {
 
     @Autowired
     private AttachRepository attachRepository;
-  /*  public String saveToSystemOld(MultipartFile file) {
-        try {
-            // attaches/2022/04/23/UUID.png
-            String attachPath = getYmDString(); // 2022/04/23
-            String extension = getExtension(file.getOriginalFilename()); // .png....
-            String fileName = UUID.randomUUID().toString() + "." + extension; // UUID.png
 
-            File folder = new File(attachFolder + attachPath);  // attaches/2022/04/23/
-            if (!folder.exists()) {
-                folder.mkdirs();
-            }
-
-            byte[] bytes = file.getBytes();
-
-            Path path = Paths.get(attachFolder + attachPath + "/" + fileName); // attaches/2022/04/23/UUID.png
-            Files.write(path, bytes);
-            return fileName;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
 
     public AttachDTO saveToSystem(MultipartFile file) {
         try {
@@ -116,23 +95,7 @@ public class AttachService {
         return dto;
     }
 
-   /* public String saveToSystemOld(MultipartFile file) {
-        try {
-            File folder = new File("attaches");
-            if (!folder.exists()) {
-                folder.mkdir();
-            }
 
-            byte[] bytes = file.getBytes();
-
-            Path path = Paths.get("attaches/" + file.getOriginalFilename());
-            Files.write(path, bytes);
-            return file.getOriginalFilename();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
 
     public byte[] loadImage(String fileName) {
         byte[] imageInByte;

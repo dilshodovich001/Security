@@ -1,11 +1,9 @@
 package com.example.controller;
 
+
 import com.example.dto.AttachDTO;
-import com.example.enums.ProfileRole;
 import com.example.service.AttachService;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;

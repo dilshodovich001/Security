@@ -1,10 +1,13 @@
-INSERT INTO profile(id, firstname, lastname, email, password, created_date, role, status, photo_id)
-VALUES (1,
-        'Raufov',
-        'Maruf',
-        'raufovmaruf777@gmail.com',
-        'hashed_password',
-        '2023-12-07 23:55:11.160562',
-        'ADMIN',
-        'ACTIVE',
-        'ce798197-17c4-4916-89c8-2eac6dcaaeae');
+INSERT INTO profile(id, created_date, email, name, surname, password, phone, photo_id, role, status)
+VALUES (
+           1,
+           '2023-12-07 23:55:11.160562',
+           'raufovmaruf777@gmail.com',
+           'Raufov',
+           'Maruf',
+           'f9919e52ce90b0e41d0f9ced7fb8b3bd', -- Added comma here
+           '+998932222077',
+           '643d5efc-a7ad-4374-a8b0-af5c13a707f1',
+           'ADMIN',
+           'ACTIVE'
+       );
