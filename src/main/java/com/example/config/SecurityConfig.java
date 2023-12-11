@@ -50,7 +50,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/attach/**").permitAll()
-                .requestMatchers("/profile/**").hasRole("ADMIN")
+
                 .requestMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated().and().addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         http.exceptionHandling().authenticationEntryPoint(authEntryPointJwt);

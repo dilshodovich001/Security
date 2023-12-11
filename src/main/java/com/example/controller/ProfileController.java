@@ -1,25 +1,28 @@
 package com.example.controller;
 
 
+import com.example.dto.ProfileDTO;
 import com.example.dto.ProfileRoleDTO;
 import com.example.service.ProfileService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+import java.util.List;
 @Slf4j
-@RequestMapping("/profile")
+@RestController
 @RequiredArgsConstructor
+@RequestMapping("/profile")
 public class ProfileController {
     private final ProfileService profileService;
 
-    @PostMapping("/profile_role/{id}")
-//    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Integer> addProfile(@PathVariable("id") Integer id, @RequestBody ProfileRoleDTO roleDTO) {
-        log.info("Add Profile role MODERATOR and PUBLISHER --> " + id);
-        int response = profileService.addProfile(id,roleDTO);
+    @GetMapping("/profile_list")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<List<ProfileDTO>> profileList() {
+        List<ProfileDTO> response = profileService.profileList();
         return ResponseEntity.ok(response);
     }
+
 }

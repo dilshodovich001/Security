@@ -1,5 +1,6 @@
 ### Registration ###
 POST http://localhost:8082/auth/registration
+
 Content-Type: application/json
 
 {
@@ -27,5 +28,5 @@ Content-Type: application/json
 
 {
   "phone": "+998932222077",
-  "password": "111111"
+  "password": "22222"
 }

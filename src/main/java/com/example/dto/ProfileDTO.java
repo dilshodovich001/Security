@@ -4,13 +4,14 @@ package com.example.dto;
 import com.example.enums.ProfileRole;
 import com.example.enums.ProfileStatus;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Data
+@NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProfileDTO {
     private Integer id;

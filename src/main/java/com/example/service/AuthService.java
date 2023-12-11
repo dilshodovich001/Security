@@ -11,12 +11,16 @@ import com.example.exp.PasswordOrEmailWrongException;
 import com.example.repository.ProfileRepository;
 import com.example.util.JwtTokenUtil;
 import com.example.util.MD5Util;
+import lombok.Builder;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Data
+@Builder
 @RequiredArgsConstructor
 public class AuthService {
 
@@ -34,7 +38,6 @@ public class AuthService {
                 throw new ItemAlreadyExistException("Profile Already registered");
             }
         }
-
         ProfileEntity profile = new ProfileEntity();
         profile.setName(dto.getName());
         profile.setSurname(dto.getSurname());
@@ -42,6 +45,7 @@ public class AuthService {
         profile.setEmail(dto.getEmail());
         profile.setStatus(ProfileStatus.ACTIVE);
         profile.setPassword(MD5Util.encode(dto.getPassword()));
+        profile.setVisible(Boolean.TRUE);
         profileRepository.save(profile);
 
         return "Successfully registered";

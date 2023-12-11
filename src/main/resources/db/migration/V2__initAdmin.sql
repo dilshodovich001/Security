@@ -8,6 +8,6 @@ VALUES (
            'f9919e52ce90b0e41d0f9ced7fb8b3bd', -- Added comma here
            '+998932222077',
            '643d5efc-a7ad-4374-a8b0-af5c13a707f1',
-           'ADMIN',
+           'ROLE_ADMIN',
            'ACTIVE'
        );

@@ -38,7 +38,7 @@ public class ProfileEntity {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private ProfileRole role = ProfileRole.USER;
+    private ProfileRole role = ProfileRole.ROLE_USER;
 
     @Column
     @Enumerated(EnumType.STRING)

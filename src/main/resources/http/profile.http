@@ -1,6 +1,3 @@
-POST localhost:8081/profile/profile_role/5
-Content-Type: application/json
-
-{
-  "role": "MODERATOR"
-}
+### Profile list
+GET http://localhost:8082/profile/profile_list
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDIyNjExMzEsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyMzQ3NTMxLCJpc3MiOiJTZWN1cml0eSJ9.F138hKJDh1r_ITPaolzSnDRKkwTwFEGKPXgRqmdi7ymb308Bo7Q_njz-1BmhYSSDcGCxZwVt381IvZOrA2F_Lw

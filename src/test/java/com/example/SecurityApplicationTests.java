@@ -9,6 +9,6 @@ class SecurityApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println(MD5Util.encode("11111"));
+		System.out.println(MD5Util.encode("22222"));
 	}
 }
