@@ -331,3 +331,76 @@ Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violate
 2023-12-11T07:20:21.179+05:00  INFO 10608 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-12-11T07:20:21.180+05:00  INFO 10608 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-12-11T07:20:21.182+05:00  INFO 10608 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-11T07:33:20.209+05:00  INFO 10608 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-11T07:33:20.220+05:00  INFO 10608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-11T07:33:20.227+05:00  INFO 10608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-11T07:33:30.208+05:00  INFO 16208 --- [main] com.example.SecurityApplication          : Starting SecurityApplication using Java 19.0.2 with PID 16208 (C:\Users\Ma'ruf Raufov\Downloads\Telegram Desktop\Security\Security\target\classes started by Ma'ruf Raufov in C:\Users\Ma'ruf Raufov\Downloads\Telegram Desktop\Security\Security)
+2023-12-11T07:33:30.226+05:00 DEBUG 16208 --- [main] com.example.SecurityApplication          : Running with Spring Boot v3.0.1, Spring v6.0.3
+2023-12-11T07:33:30.227+05:00  INFO 16208 --- [main] com.example.SecurityApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-12-11T07:33:31.369+05:00  INFO 16208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-11T07:33:31.458+05:00  INFO 16208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2023-12-11T07:33:32.083+05:00  INFO 16208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-12-11T07:33:32.095+05:00  INFO 16208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-11T07:33:32.095+05:00  INFO 16208 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-12-11T07:33:32.205+05:00  INFO 16208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-11T07:33:32.205+05:00  INFO 16208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1916 ms
+2023-12-11T07:33:32.354+05:00  INFO 16208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-11T07:33:32.424+05:00  INFO 16208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-12-11T07:33:32.654+05:00  WARN 16208 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-12-11T07:33:32.799+05:00  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-11T07:33:33.021+05:00  INFO 16208 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e4ca109
+2023-12-11T07:33:33.022+05:00  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-11T07:33:33.084+05:00  INFO 16208 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-12-11T07:33:34.091+05:00  INFO 16208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-11T07:33:34.101+05:00  INFO 16208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-11T07:33:34.819+05:00 DEBUG 16208 --- [main] com.example.config.JwtTokenFilter        : Filter 'jwtTokenFilter' configured for use
+2023-12-11T07:33:36.093+05:00  INFO 16208 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23974cac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@85104d6, org.springframework.security.web.context.SecurityContextHolderFilter@6418075c, org.springframework.security.web.header.HeaderWriterFilter@1d6ed085, org.springframework.security.web.authentication.logout.LogoutFilter@5fc42998, com.example.config.JwtTokenFilter@37b44e8e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@530ee11a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54d116d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56e9126f, org.springframework.security.web.access.ExceptionTranslationFilter@66ab3716, org.springframework.security.web.access.intercept.AuthorizationFilter@282079b9]
+2023-12-11T07:33:36.594+05:00  INFO 16208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-12-11T07:33:36.623+05:00  INFO 16208 --- [main] com.example.SecurityApplication          : Started SecurityApplication in 6.959 seconds (process running for 7.926)
+2023-12-11T07:33:36.759+05:00  INFO 16208 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-12-11T07:33:36.761+05:00  INFO 16208 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-12-11T07:33:36.761+05:00  INFO 16208 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-12-11T07:33:36.802+05:00  INFO 16208 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/kun_uz (PostgreSQL 14.8)
+2023-12-11T07:33:36.900+05:00  INFO 16208 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.056s)
+2023-12-11T07:33:36.928+05:00  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2023-12-11T07:33:36.930+05:00  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-12-11T07:34:40.648+05:00  INFO 16208 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11T07:34:40.649+05:00  INFO 16208 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-11T07:34:40.650+05:00  INFO 16208 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-11T07:34:56.734+05:00  INFO 16208 --- [http-nio-8082-exec-2] com.example.controller.AuthController    : Registration --> com.example.dto.auth.AuthRegistrationDTO@1b9742a8
+2023-12-11T07:39:15.139+05:00  INFO 16208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-11T07:39:15.144+05:00  INFO 16208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-11T07:39:15.150+05:00  INFO 16208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-11T07:39:21.057+05:00  INFO 15448 --- [main] com.example.SecurityApplication          : Starting SecurityApplication using Java 19.0.2 with PID 15448 (C:\Users\Ma'ruf Raufov\Downloads\Telegram Desktop\Security\Security\target\classes started by Ma'ruf Raufov in C:\Users\Ma'ruf Raufov\Downloads\Telegram Desktop\Security\Security)
+2023-12-11T07:39:21.072+05:00 DEBUG 15448 --- [main] com.example.SecurityApplication          : Running with Spring Boot v3.0.1, Spring v6.0.3
+2023-12-11T07:39:21.074+05:00  INFO 15448 --- [main] com.example.SecurityApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-12-11T07:39:22.215+05:00  INFO 15448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-11T07:39:22.283+05:00  INFO 15448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2023-12-11T07:39:22.960+05:00  INFO 15448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-12-11T07:39:22.971+05:00  INFO 15448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-11T07:39:22.971+05:00  INFO 15448 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-12-11T07:39:23.074+05:00  INFO 15448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-11T07:39:23.074+05:00  INFO 15448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1935 ms
+2023-12-11T07:39:23.233+05:00  INFO 15448 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-11T07:39:23.287+05:00  INFO 15448 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-12-11T07:39:23.510+05:00  WARN 15448 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-12-11T07:39:23.610+05:00  INFO 15448 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-11T07:39:23.803+05:00  INFO 15448 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a16984c
+2023-12-11T07:39:23.806+05:00  INFO 15448 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-11T07:39:23.895+05:00  INFO 15448 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-12-11T07:39:25.130+05:00  INFO 15448 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-11T07:39:25.139+05:00  INFO 15448 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-11T07:39:25.738+05:00 DEBUG 15448 --- [main] com.example.config.JwtTokenFilter        : Filter 'jwtTokenFilter' configured for use
+2023-12-11T07:39:27.238+05:00  INFO 15448 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ed3e66d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e9947af, org.springframework.security.web.context.SecurityContextHolderFilter@4f5d7091, org.springframework.security.web.header.HeaderWriterFilter@7057d9f4, org.springframework.security.web.authentication.logout.LogoutFilter@282079b9, com.example.config.JwtTokenFilter@442151d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@128ebca1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34128fed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d60aa4, org.springframework.security.web.access.ExceptionTranslationFilter@530ee11a, org.springframework.security.web.access.intercept.AuthorizationFilter@579cfcc4]
+2023-12-11T07:39:27.845+05:00  INFO 15448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-12-11T07:39:27.859+05:00  INFO 15448 --- [main] com.example.SecurityApplication          : Started SecurityApplication in 7.335 seconds (process running for 8.119)
+2023-12-11T07:39:27.924+05:00  INFO 15448 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-12-11T07:39:27.925+05:00  INFO 15448 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-12-11T07:39:27.925+05:00  INFO 15448 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-12-11T07:39:27.946+05:00  INFO 15448 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/kun_uz (PostgreSQL 14.8)
+2023-12-11T07:39:28.003+05:00  INFO 15448 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.030s)
+2023-12-11T07:39:28.019+05:00  INFO 15448 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2023-12-11T07:39:28.019+05:00  INFO 15448 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-12-11T07:39:52.122+05:00  INFO 15448 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11T07:39:52.122+05:00  INFO 15448 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-11T07:39:52.125+05:00  INFO 15448 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

@@ -26,10 +26,6 @@ public class ProfileService {
                         ("Profile Not Found"));
     }
 
-    public int addProfile(Integer id, ProfileRoleDTO roleDTO) {
-        ProfileEntity profile = get(id);
-        return  profileRepository.updateRole(roleDTO.getRole() ,profile.getId());
-    }
 
     public List<ProfileDTO> profileList() {
         List<ProfileDTO> dtos = new ArrayList<>();
@@ -45,5 +41,10 @@ public class ProfileService {
             dtos.add(profileDTO);
         }
         return dtos;
+    }
+
+    public int roleCreate(Integer id, ProfileRoleDTO dto) {
+        ProfileEntity profile = get(id);
+        return profileRepository.updateRole(profile.getId(),dto.getRole());
     }
 }

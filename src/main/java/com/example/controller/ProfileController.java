@@ -25,4 +25,12 @@ public class ProfileController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping("/profile_role/create/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<Integer> roleCreate(@PathVariable("id") Integer id,
+                                              @RequestBody ProfileRoleDTO dto){
+        int response = profileService.roleCreate(id,dto);
+        return ResponseEntity.ok(response);
+    }
+
 }

@@ -17,8 +17,8 @@ public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer>
 
     @Transactional
     @Modifying
-    @Query("update ProfileEntity p set p.role = ?1 where p.id = ?2")
-    int updateRole(ProfileRole role , Integer id);
+    @Query("update ProfileEntity p set p.role = ?2 where p.id = ?1")
+    int updateRole(Integer id,ProfileRole role);
 
     Optional<ProfileEntity> findByPhone(String phone);
 
