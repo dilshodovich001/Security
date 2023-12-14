@@ -9,5 +9,4 @@ VALUES (
            '+998932222077',
            '643d5efc-a7ad-4374-a8b0-af5c13a707f1',
            'ROLE_ADMIN',
-           'ACTIVE'
-       );
+           'ACTIVE'   );

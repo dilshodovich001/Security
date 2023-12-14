@@ -1,0 +1,11 @@
+### Articletype Create
+POST localhost:8081/article_type/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI1MzgxNzgsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyNjI0NTc4LCJpc3MiOiJTZWN1cml0eSJ9.Mslo8MMJmrKnIeewg0IEZCcUm5NcHwjo1sRGOX7HtnZSDfHGKepsXIBZ_4nMTgZV75vLPhFNdSuctp_26KweDA
+
+{
+  "key": "yyyyyyyyyyyy",
+  "nameUz": "Bugun toshkentda",
+  "nameRu": "segodnaya pogoda ",
+  "nameEn": "Today weather very good"
+}
