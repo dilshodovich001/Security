@@ -1,6 +1,6 @@
 ### Profile list
 GET http://localhost:8082/profile/profile_list
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDIyNjExMzEsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyMzQ3NTMxLCJpc3MiOiJTZWN1cml0eSJ9.F138hKJDh1r_ITPaolzSnDRKkwTwFEGKPXgRqmdi7ymb308Bo7Q_njz-1BmhYSSDcGCxZwVt381IvZOrA2F_Lw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI1MzgxNzgsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyNjI0NTc4LCJpc3MiOiJTZWN1cml0eSJ9.Mslo8MMJmrKnIeewg0IEZCcUm5NcHwjo1sRGOX7HtnZSDfHGKepsXIBZ_4nMTgZV75vLPhFNdSuctp_26KweDA
 
 ### Role Profile
 POST http://localhost:8082/profile/profile_role/create/6
@@ -9,4 +9,17 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDIyNjExMzEsInBob25lIjoiK
 
 {
   "role": "ROLE_MODERATOR"
+}
+
+### Delete profile
+DELETE http://localhost:8081/profile/delete/6
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI1MzgxNzgsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyNjI0NTc4LCJpc3MiOiJTZWN1cml0eSJ9.Mslo8MMJmrKnIeewg0IEZCcUm5NcHwjo1sRGOX7HtnZSDfHGKepsXIBZ_4nMTgZV75vLPhFNdSuctp_26KweDA
+
+
+### Profile Filter
+POST localhost:8081/profile/filter?page=0&size=10
+Content-Type: application/json
+
+{
+  "name": "Alijon"
 }

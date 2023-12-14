@@ -2,10 +2,14 @@ package com.example.controller;
 
 
 import com.example.dto.ProfileDTO;
+import com.example.dto.ProfileFilterDTO;
 import com.example.dto.ProfileRoleDTO;
+import com.example.enums.ProfileRole;
 import com.example.service.ProfileService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +34,20 @@ public class ProfileController {
     public ResponseEntity<Integer> roleCreate(@PathVariable("id") Integer id,
                                               @RequestBody ProfileRoleDTO dto){
         int response = profileService.roleCreate(id,dto);
+        return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id) {
+        int result = profileService.delete(id);
+        return ResponseEntity.ok(result);
+    }
+    @PostMapping("/filter")
+    public ResponseEntity<?> filter(@RequestBody ProfileFilterDTO profileFilterDTO ,
+                                    @RequestParam("page") int page
+            ,@RequestParam("size") int size){
+        Page<ProfileFilterDTO> response = profileService.filter(profileFilterDTO, page, size);
         return ResponseEntity.ok(response);
     }
 

@@ -24,4 +24,9 @@ public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer>
 
     ProfileEntity findByPhoneAndPassword(String phone, String password);
 
+    @Transactional
+    @Modifying
+    @Query("update ProfileEntity p  set p.visible = false where p.id = ?1")
+    int update(Integer id);
+
 }
