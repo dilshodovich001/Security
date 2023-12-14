@@ -11,14 +11,14 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 @Repository
 @Transactional(readOnly = true)
-public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer> {
+public interface ProfileRepository extends JpaRepository<ProfileEntity, Long> {
 
     Optional<ProfileEntity> findByEmail(String email);
 
     @Transactional
     @Modifying
     @Query("update ProfileEntity p set p.role = ?2 where p.id = ?1")
-    int updateRole(Integer id,ProfileRole role);
+    int updateRole(Long id,ProfileRole role);
 
     Optional<ProfileEntity> findByPhone(String phone);
 

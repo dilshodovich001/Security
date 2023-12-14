@@ -14,21 +14,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProfileDTO {
-    private Integer id;
+    private Long id;
     private String name;
-
     private String surname;
-
     private String phone;
-
     private String password;
-
     private String email;
-
-
     private ProfileRole role;
-
     private ProfileStatus status;
     private LocalDateTime createdDate;
     private Boolean visible;
+    private String jwt;
 }

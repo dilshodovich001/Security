@@ -1,7 +1,18 @@
 ### Profile list
 GET http://localhost:8082/profile/profile_list
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDIyNjExMzEsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyMzQ3NTMxLCJpc3MiOiJTZWN1cml0eSJ9.F138hKJDh1r_ITPaolzSnDRKkwTwFEGKPXgRqmdi7ymb308Bo7Q_njz-1BmhYSSDcGCxZwVt381IvZOrA2F_Lw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI0NzE1NzcsInBob25lIjoiMzMzMzMzMyIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE3MDA3Njg2MDksImlzcyI6IlNlY3VyaXR5In0.4nCwcfZ17YSDk1efNCN68YTcZoGTC2hxPulmK4GoXRFXUDrHBqXkA-18-6ZQxQ8WdjQs5lqGp1U8WlbloKqlRQ
 
+###PROFILE UPDATE
+PUT http://localhost:8082/profile/update/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI0NzE1NzcsInBob25lIjoiMzMzMzMzMyIsInJvbGUiOiJST0xFX1VTRVIiLCJleHAiOjE3MDA3Njg2MDksImlzcyI6IlNlY3VyaXR5In0.4nCwcfZ17YSDk1efNCN68YTcZoGTC2hxPulmK4GoXRFXUDrHBqXkA-18-6ZQxQ8WdjQs5lqGp1U8WlbloKqlRQ
+
+{
+  "name": "Xushnud",
+  "suname": "Narimanov",
+  "email": "narimanovxushnud31",
+  "phone": "+998938576100"
+}
 ### Role Profile
 POST http://localhost:8082/profile/profile_role/create/6
 Content-Type: application/json

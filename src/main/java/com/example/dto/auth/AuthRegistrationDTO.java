@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 public class AuthRegistrationDTO {
 
+    private Long id;
     @NotBlank
     @Size(min = 3, message = "Name is required")
     private String name;

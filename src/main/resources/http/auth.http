@@ -3,22 +3,19 @@ POST http://localhost:8082/auth/registration
 Content-Type: application/json
 
 {
-  "name": "Alijon",
-  "surname": "Alliyev",
-  "phone": "3333333",
-  "password": "7777",
-  "email": "raufovmaruf444@gmail.com"
+  "name": "Ali",
+  "surname": "Valiyev",
+  "phone": "6700",
+  "password": "2700",
+  "email": "alivaliy@gmail.com"
 }
-
-
-
 ### Authorization user token
 POST http://localhost:8082/auth/login
 Content-Type: application/json
 
 {
-  "phone": "3333333",
-  "password": "7777"
+  "phone": "6700",
+  "password": "2700"
 }
 
 ### Authorization Admin token
