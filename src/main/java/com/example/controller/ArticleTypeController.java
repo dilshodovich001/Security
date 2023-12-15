@@ -8,10 +8,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,5 +19,10 @@ public class ArticleTypeController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> create(@Valid @RequestBody ArticleTypeDTO dto) {
         return ResponseEntity.ok(articleTypeService.create(dto));
+    }
+    @DeleteMapping(value = "delete/id")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> delete(@PathVariable Long id){
+       return ResponseEntity.ok(articleTypeService.delete(id));
     }
 }

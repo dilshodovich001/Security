@@ -37,4 +37,8 @@ public class ArticleTypeService {
     }
 
 
+    public Boolean delete(Long id) {
+          articleTypeRepository.deleteById(id);
+          return true;
+    }
 }
