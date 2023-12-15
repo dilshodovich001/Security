@@ -22,6 +22,12 @@ import java.util.List;
 public class ProfileController {
     private final ProfileService profileService;
 
+    @PutMapping(value = "/update/{id}")
+    public ResponseEntity<ProfileDTO> update(@RequestBody ProfileDTO dto,
+                                             @RequestParam Long id){
+        return ResponseEntity.ok(profileService.update(dto));
+    }
+
     @GetMapping("/profile_list")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<ProfileDTO>> profileList() {

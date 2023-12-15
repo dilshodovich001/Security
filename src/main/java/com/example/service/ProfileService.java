@@ -82,4 +82,8 @@ public class ProfileService {
 
     }
 
+    public ProfileDTO update(ProfileDTO dto) {
+
+        return null;
+    }
 }
