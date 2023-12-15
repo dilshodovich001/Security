@@ -9,3 +9,26 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI1MzgxNzgsInBob25lIjoiK
   "nameRu": "segodnaya pogoda ",
   "nameEn": "Today weather very good"
 }
+
+
+### Update
+
+PUT http://localhost:8081/article_type/admin/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI2NjA3NDEsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyNzQ3MTQxLCJpc3MiOiJTZWN1cml0eSJ9.iqygfpmvYsmZCn1ZArWLGNWl_xeGAO2silO9q31_M_dbsEiBN6oPDefk3lBB_FJXTaQRpQrP_Ng4RyrZVx1dMA
+
+{
+"key": "yyyyyyyyyyyy",
+"nameUz": "Bugun toshkentda hmm",
+"nameRu": "segodnaya pogoda qannay",
+"nameEn": "Today weather very good mi"
+}
+
+### Get list
+GET http://localhost:8081/article_type/list?page=0&size=1
+
+### Get Language
+GET http://localhost:8081/article_type/byLang?lang=EN
+
+
+

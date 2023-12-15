@@ -22,7 +22,7 @@ Content-Type: application/json
 }
 
 ### Authorization Admin token
-POST localhost:8082/auth/login
+POST localhost:8081/auth/login
 Content-Type: application/json
 
 {
