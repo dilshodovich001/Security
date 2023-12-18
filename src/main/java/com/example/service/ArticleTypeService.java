@@ -31,8 +31,7 @@ public class ArticleTypeService {
         if (byKey != null) {
             throw new ArticleTypeAlreadyExitsException("Already exists key");
         }
-        ArticleTypeEntity entity = toEntity(dto);
-        articleTypeRepository.save(entity);
+        articleTypeRepository.save(toEntity(dto));
         return dto;
     }
 

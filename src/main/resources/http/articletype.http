@@ -1,10 +1,10 @@
 ### Articletype Create
 POST localhost:8081/article_type/create
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI1MzgxNzgsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyNjI0NTc4LCJpc3MiOiJTZWN1cml0eSJ9.Mslo8MMJmrKnIeewg0IEZCcUm5NcHwjo1sRGOX7HtnZSDfHGKepsXIBZ_4nMTgZV75vLPhFNdSuctp_26KweDA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI3NTA0ODIsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyODM2ODgyLCJpc3MiOiJTZWN1cml0eSJ9.Xc7TjKyh1kvHE0dqvPxqd-CU5lgBmUuE4onsMhx2nLmrYSHGa6cPm9fjW0DDRdkaIXoDGc3mKdr8O1S_V5jk4A
 
 {
-  "key": "yyyyyyyyyyyy",
+  "key": "yyyyyrryyyyyyy",
   "nameUz": "Bugun toshkentda",
   "nameRu": "segodnaya pogoda ",
   "nameEn": "Today weather very good"
@@ -25,7 +25,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI2NjA3NDEsInBob25lIjoiK
 }
 
 ### Get list
-GET http://localhost:8081/article_type/list?page=0&size=1
+GET http://localhost:8081/article_type/list?page=0&size=2
 
 ### Get Language
 GET http://localhost:8081/article_type/byLang?lang=EN

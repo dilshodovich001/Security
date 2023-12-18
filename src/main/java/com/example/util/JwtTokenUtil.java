@@ -8,14 +8,14 @@ import java.util.Date;
 
 public class JwtTokenUtil {
     private static final int tokenLiveTime = 1000 * 3600 * 24; // 1-day
-    private static final String secretKey = "mazgi" ;
+    private static final String secretKey = "mazgi";
 
     public static String encode(String phone, ProfileRole role) {
         JwtBuilder jwtBuilder = Jwts.builder();
         jwtBuilder.setIssuedAt(new Date());
         jwtBuilder.signWith(SignatureAlgorithm.HS512, secretKey);
-        jwtBuilder.claim("phone" , phone);
-        jwtBuilder.claim("role" , role);
+        jwtBuilder.claim("phone", phone);
+        jwtBuilder.claim("role", role);
         jwtBuilder.setExpiration(new Date(System.currentTimeMillis() + (tokenLiveTime)));
         jwtBuilder.setIssuer("Security");
         return jwtBuilder.compact();
