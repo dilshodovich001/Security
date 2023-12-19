@@ -1,0 +1,16 @@
+### CREATE REGION
+POST http://localhost:8081/region/create
+Content-Type: application/json
+
+{
+  "key": "DSDS",
+  "name_en": "Jizzakh",
+  "name_ru": "Djizzx",
+  "name_uz": "JIZZAX"
+}
+### UPDATE
+PUT http://localhost:8081/region/
+Content-Type: application/json
+
+### GET ALL
+GET http://localhost:8081/region/getAll

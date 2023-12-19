@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Date;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Getter
 @Setter
@@ -24,7 +26,7 @@ public class RegionEntity {
     @Column(name = "name_en")
     private String name_en;
     @Column(name = "visible")
-    private Boolean visible;
+    private Boolean visible = Boolean.TRUE;
     @Column(name = "created_date")
-    private LocalDate created_date;
+    private LocalDate created_date = LocalDate.now();
 }

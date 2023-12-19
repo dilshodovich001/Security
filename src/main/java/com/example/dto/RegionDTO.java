@@ -9,6 +9,7 @@ import java.time.LocalDate;
 public class RegionDTO {
     private Integer id;
     private String key;
+    private String name;
     private String name_uz;
     private String name_ru;
     private String name_en;
