@@ -34,17 +34,17 @@ public class SavedArticleService {
         return i != 0;
     }
 
-//    public List<SavedArticleDTO> listSaved() {
-//        List<SavedArticleEntity> all = savedArticleRepository.findAll();
-//        List<SavedArticleDTO> dtoList = new LinkedList<>();
-//
-//        for (SavedArticleEntity entity : all) {
-//            SavedArticleDTO dto1 = new SavedArticleDTO();
-//            dto1.setId(entity.getId());
-//            dto1.setProfileId(entity.getProfileId());
-//            dto1.setArticle(articleService.getArticleShortInfo(entity.getArticleId()));
-//            dtoList.add(dto1);
-//        }
-//        return dtoList;
-//     }
+    public List<SavedArticleDTO> listSaved() {
+        List<SavedArticleEntity> all = savedArticleRepository.findAll();
+        List<SavedArticleDTO> dtoList = new LinkedList<>();
+
+        for (SavedArticleEntity entity : all) {
+            SavedArticleDTO dto1 = new SavedArticleDTO();
+            dto1.setId(entity.getId());
+            dto1.setProfileId(entity.getProfileId());
+            dto1.setArticle(articleService.getArticleShortInfo(entity.getArticleId()));
+            dtoList.add(dto1);
+        }
+        return dtoList;
+     }
 }

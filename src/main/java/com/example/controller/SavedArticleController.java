@@ -27,9 +27,9 @@ public class SavedArticleController {
         return ResponseEntity.ok(response);
     }
 
-//    @GetMapping("/list")
-//    public ResponseEntity<?> listSaved(){
-//        List<SavedArticleDTO> response = savedArticleService.listSaved();
-//        return ResponseEntity.ok(response);
-//    }
+    @GetMapping("/list")
+    public ResponseEntity<?> listSaved(){
+        List<SavedArticleDTO> response = savedArticleService.listSaved();
+        return ResponseEntity.ok(response);
+    }
 }

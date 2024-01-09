@@ -148,4 +148,20 @@ public class ArticleService {
         articleRepository.shareCount(articleId);
         return articleRepository.shareCountReturn(articleId);
     }
+
+    public ArticleDTO getArticleShortInfo(String id){
+        ArticleDTO dto= new ArticleDTO();
+        ArticleEntity entity = getEntity(id);
+        dto.setId(entity.getId());
+        dto.setTitle(entity.getTitle());
+        dto.setDescription(entity.getDescription());
+        dto.setImageId(entity.getImageId());
+        return dto;
+    }
+    private ArticleEntity getEntity(String id) {
+        return  articleRepository.findById(id).orElseThrow(() -> {
+            throw new ItemNotFoundException("Not Found");
+        });
+
+    }
 }
