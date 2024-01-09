@@ -56,7 +56,4 @@ public class RegionController {
         return ResponseEntity.ok(response);
 
     }
-
-
-
 }

@@ -1,3 +1,4 @@
+
 insert into  profile(id, created_date, email, name, surname, password, phone, photo_id, role, status ,visible)
 values (
            100,
@@ -10,3 +11,4 @@ values (
            '83e8c09b-0184-4dd2-aead-69120c8a9857',
            'ROLE_ADMIN',
            'ACTIVE' ,true  );
+

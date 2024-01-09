@@ -130,6 +130,6 @@ public class RegionService {
     }
 
     public RegionEntity byKey(String key) {
-       return regionRepository.findByKey(key);
+        return regionRepository.findByKey(key);
     }
 }

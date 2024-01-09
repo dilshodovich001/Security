@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Region Create
 POST localhost:8081/region/create
 Content-Type: application/json
@@ -38,3 +39,21 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDMyMTUwMzAsInBob25lIjoiK
 GET http://localhost:8081/region/byLang?key=gulica&lang=EN
 #Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzA1OTA4MjEsImlkIjozLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2NzA2NzcyMjEsImlzcyI6Ik1hemdpIn0.gna-rhUPJcWZx5C7sKml3dAgQg7kSL3s8n2YXAHNdShPZ4ECPFB9Xu1GFlX_U2PY4EvuH9Tg9Yq4QeX8OILrIw
 
+=======
+### CREATE REGION
+POST http://localhost:8081/region/create
+Content-Type: application/json
+
+{
+  "key": "DSDS",
+  "name_en": "Jizzakh",
+  "name_ru": "Djizzx",
+  "name_uz": "JIZZAX"
+}
+### UPDATE
+PUT http://localhost:8081/region/
+Content-Type: application/json
+
+### GET ALL
+GET http://localhost:8081/region/getAll
+>>>>>>> 5bb6a64a81fa9a0fefe2dfd672f8ae0e18e9af03

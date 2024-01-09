@@ -63,3 +63,36 @@
 2024-01-09T15:00:50.026+05:00  INFO 18800 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.031s)
 2024-01-09T15:00:50.036+05:00  INFO 18800 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
 2024-01-09T15:00:50.036+05:00  INFO 18800 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2024-01-09T15:13:37.707+05:00  INFO 18800 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-09T15:13:37.709+05:00  INFO 18800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-09T15:13:37.713+05:00  INFO 18800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-09T15:14:07.288+05:00  INFO 10664 --- [main] com.example.SecurityApplication          : Starting SecurityApplication using Java 19.0.2 with PID 10664 (C:\Users\Ma'ruf Raufov\Downloads\Telegram Desktop\Security\Security\target\classes started by Ma'ruf Raufov in C:\Users\Ma'ruf Raufov\Downloads\Telegram Desktop\Security\Security)
+2024-01-09T15:14:07.324+05:00 DEBUG 10664 --- [main] com.example.SecurityApplication          : Running with Spring Boot v3.0.1, Spring v6.0.3
+2024-01-09T15:14:07.325+05:00  INFO 10664 --- [main] com.example.SecurityApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-01-09T15:14:08.434+05:00  INFO 10664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-09T15:14:08.516+05:00  INFO 10664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 10 JPA repository interfaces.
+2024-01-09T15:14:09.058+05:00  INFO 10664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2024-01-09T15:14:09.071+05:00  INFO 10664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-09T15:14:09.071+05:00  INFO 10664 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2024-01-09T15:14:09.170+05:00  INFO 10664 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-09T15:14:09.170+05:00  INFO 10664 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1784 ms
+2024-01-09T15:14:09.327+05:00  INFO 10664 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-09T15:14:09.381+05:00  INFO 10664 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2024-01-09T15:14:09.552+05:00  WARN 10664 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-01-09T15:14:09.659+05:00  INFO 10664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-09T15:14:09.823+05:00  INFO 10664 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33a47707
+2024-01-09T15:14:09.825+05:00  INFO 10664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-09T15:14:09.876+05:00  INFO 10664 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-01-09T15:14:10.993+05:00  INFO 10664 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-09T15:14:11.002+05:00  INFO 10664 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-09T15:14:11.498+05:00 DEBUG 10664 --- [main] com.example.config.JwtTokenFilter        : Filter 'jwtTokenFilter' configured for use
+2024-01-09T15:14:12.786+05:00  INFO 10664 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e7f72, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@446c8a54, org.springframework.security.web.context.SecurityContextHolderFilter@3e1f6318, org.springframework.security.web.header.HeaderWriterFilter@3a44ebd5, org.springframework.security.web.authentication.logout.LogoutFilter@589dac96, com.example.config.JwtTokenFilter@133d0471, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22ca5fe1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45cd5c56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3787eac3, org.springframework.security.web.access.ExceptionTranslationFilter@751636da, org.springframework.security.web.access.intercept.AuthorizationFilter@33cee31a]
+2024-01-09T15:14:13.136+05:00  INFO 10664 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2024-01-09T15:14:13.146+05:00  INFO 10664 --- [main] com.example.SecurityApplication          : Started SecurityApplication in 6.543 seconds (process running for 7.547)
+2024-01-09T15:14:13.183+05:00  INFO 10664 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2024-01-09T15:14:13.184+05:00  INFO 10664 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2024-01-09T15:14:13.184+05:00  INFO 10664 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2024-01-09T15:14:13.197+05:00  INFO 10664 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/kun_uz (PostgreSQL 14.8)
+2024-01-09T15:14:13.248+05:00  INFO 10664 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.030s)
+2024-01-09T15:14:13.260+05:00  INFO 10664 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2024-01-09T15:14:13.260+05:00  INFO 10664 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.

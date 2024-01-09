@@ -23,4 +23,5 @@ public interface RegionRepository extends JpaRepository<RegionEntity, Integer> {
 
     RegionEntity findAllByKey(String key);
 
+
 }

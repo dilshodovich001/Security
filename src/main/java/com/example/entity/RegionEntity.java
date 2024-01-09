@@ -25,6 +25,7 @@ public class RegionEntity {
     @Column(name = "name_uz")
     private String nameUz;
     @Column(name = "name_ru")
+
     private String nameRu;
     @Column(name = "name_eng")
     private String nameEn;
