@@ -5,9 +5,12 @@ import com.example.dto.ProfileDTO;
 import com.example.dto.ProfileFilterDTO;
 import com.example.dto.ProfileRoleDTO;
 import com.example.entity.ProfileEntity;
+import com.example.enums.ProfileStatus;
+import com.example.exp.AlreadyExistsException;
 import com.example.exp.ItemNotFoundException;
 import com.example.repository.ProfileRepository;
 import com.example.repository.custom.ProfileCustomRepository;
+import com.example.util.MD5Util;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +20,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -29,6 +34,8 @@ public class ProfileService {
     private final ProfileRepository profileRepository;
     @Autowired
     private  ProfileCustomRepository profileCustomRepository;
+    @Autowired
+    private AttachService attachService;
 
     public ProfileEntity get(Integer id) {
         return profileRepository.findById(id).
@@ -80,6 +87,34 @@ public class ProfileService {
         }
         return new PageImpl<>(dtos, paging,all.getTotalElements());
 
+    }
+
+    public ProfileDTO update(ProfileDTO dto) {
+
+        return null;
+    }
+
+    public ProfileDTO create(ProfileDTO profileDTO) {
+        if (profileRepository.findByPhone(profileDTO.getPhone()).isPresent()) {
+            throw new AlreadyExistsException("Phone already exists");
+        }
+        ProfileEntity entity = toEntity(profileDTO);
+        profileRepository.save(entity);
+        return profileDTO;
+    }
+    public ProfileEntity toEntity(ProfileDTO profileDTO) {
+        ProfileEntity entity = new ProfileEntity();
+        entity.setName(profileDTO.getName());
+        entity.setSurname(profileDTO.getSurname());
+        entity.setPhone(profileDTO.getPhone());
+        entity.setPassword(MD5Util.encode(profileDTO.getPassword()));
+        entity.setRole(profileDTO.getRole());
+        entity.setVisible(true);
+        entity.setStatus(ProfileStatus.ACTIVE);
+        entity.setEmail(profileDTO.getEmail());
+        entity.setCreatedDate(LocalDateTime.now());
+        entity.setPhotoId(attachService.getPhotoId(profileDTO.getPhotoId()));
+        return entity;
     }
 
 }

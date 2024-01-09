@@ -53,6 +53,9 @@ public class SecurityConfig {
                 .requestMatchers("/profile/**").permitAll()
                 .requestMatchers("/article_type/**").permitAll()
                 .requestMatchers("/category/**").permitAll()
+                .requestMatchers("/region/**").permitAll()
+                .requestMatchers("/article/**").permitAll()
+                .requestMatchers("/article_like/**").permitAll()
                 .requestMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated().and().addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         http.exceptionHandling().authenticationEntryPoint(authEntryPointJwt);

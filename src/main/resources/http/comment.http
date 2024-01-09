@@ -1,0 +1,28 @@
+### create comment
+POST http://localhost:8081/comment/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzEwMjEwMTMsImlkIjo3LCJyb2xlIjoiTU9ERVJBVE9SIiwiZXhwIjoxNjcxMTA3NDEzLCJpc3MiOiJNYXpnaSJ9.ehh83NMEoQ82bO44M9xsE6ogI-DiiL1A0WwB95dBCg72kiJGgq1LuvU7mtrCUia1Z6V2LtuKatjzw8wmpU5hpw
+
+{
+  "content": "hello my friend ",
+  "articleId": "8e127140-7f63-49b4-aed2-70ef9dbaa127",
+  "replyId": 1
+}
+
+
+### Update comment
+PUT http://localhost:8081/comment/update/8e127140-7f63-49b4-aed2-70ef9dbaa127
+Content-Type: application/json
+
+{
+  "content": "Hi  how are you"
+}
+
+
+### get Page comment Admin
+GET http://localhost:8081/comment/pageComment?page=0&size=2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzEwMzEwMTEsImlkIjozLCJyb2xlIjoiQURNSU4iLCJleHAiOjE2NzExMTc0MTEsImlzcyI6Ik1hemdpIn0.d0w5P3yBWZ6u6sXfXCKpWttu9rFYGAw3jaQlOkZpyyORGIm4RwI8ZnKk8BdFr2ae2Gm3OkICvwQRkB4bvJbFtQ
+
+
+###  replied
+GET http://localhost:8081/comment/replied/14

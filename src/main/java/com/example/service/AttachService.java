@@ -3,6 +3,7 @@ package com.example.service;
 
 import com.example.dto.AttachDTO;
 import com.example.entity.AttachEntity;
+import com.example.exp.AttachNotFoundIdException;
 import com.example.exp.ItemNotFoundException;
 import com.example.repository.AttachRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -125,36 +126,6 @@ public class AttachService {
         }
         return null;
     }
-   /* public byte[] loadImageOld(String fileName) {
-        byte[] imageInByte;
-        BufferedImage originalImage;
-        try {
-            originalImage = ImageIO.read(new File("attaches/" + fileName));
-
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            ImageIO.write(originalImage, "png", baos);
-
-            baos.flush();
-            imageInByte = baos.toByteArray();
-            baos.close();
-            return imageInByte;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return new byte[0];
-    }*/
-/*    public byte[] open_generalOld(String fileName) {
-        byte[] data;
-        try {
-            Path file = Paths.get("attaches/2022/12/7" + fileName);
-            data = Files.readAllBytes(file);
-            return data;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return new byte[0];
-    }*/
-
 
     public byte[] open_general(String key) {
         byte[] data;
@@ -189,20 +160,7 @@ public class AttachService {
         }
     }
 
-    /* public Resource downloadOld(String fileName) {
-         try {
-             Path file = Paths.get("attaches/" + fileName);
-             Resource resource = new UrlResource(file.toUri());
 
-             if (resource.exists() || resource.isReadable()) {
-                 return resource;
-             } else {
-                 throw new RuntimeException("Could not read the file!");
-             }
-         } catch (MalformedURLException e) {
-             throw new RuntimeException("Error: " + e.getMessage());
-         }
-     }*/
     public String getYmDString() {
         int year = LocalDateTime.now().getYear();
         int month = LocalDateTime.now().getMonthValue();
@@ -219,6 +177,12 @@ public class AttachService {
 
     public AttachEntity get(String id) {
         return attachRepository.findById(id).orElseThrow(() -> new ItemNotFoundException("Attach not found"));
+    }
+    public String getPhotoId(String id) {
+        if (attachRepository.findById(id).isEmpty()) {
+            throw new AttachNotFoundIdException("Not found photo id");
+        }
+        return id;
     }
 
     public Page<AttachDTO> getPaginationUrl(Integer page, Integer size) {
@@ -241,7 +205,7 @@ public class AttachService {
 
     public Boolean delete(String id) {
         AttachEntity attach = attachRepository.findById(id).orElseThrow(() -> {
-            throw new ItemNotFoundException("Not found");
+            throw new ItemNotFoundException("Not found photo");
         });
 
         File file = new File(attachFolder + attach.getPath() + "/" + id + "." + attach.getExtension());

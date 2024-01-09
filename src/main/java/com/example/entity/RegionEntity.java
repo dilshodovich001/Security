@@ -1,30 +1,37 @@
 package com.example.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-@Getter
-@Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 @Table(name = "region")
 public class RegionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "key",
-            unique = true)
+
+    @Column
     private String key;
+
     @Column(name = "name_uz")
-    private String name_uz;
+    private String nameUz;
     @Column(name = "name_ru")
-    private String name_ru;
-    @Column(name = "name_en")
-    private String name_en;
-    @Column(name = "visible")
+    private String nameRu;
+    @Column(name = "name_eng")
+    private String nameEn;
+    @Column
     private Boolean visible;
+
     @Column(name = "created_date")
-    private LocalDate created_date;
+    private LocalDateTime createdDate = LocalDateTime.now();
+
 }

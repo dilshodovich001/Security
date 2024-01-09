@@ -1,3 +1,21 @@
+### Profile Create
+POST http://localhost:8081/profile/create
+Content-Type: application/json
+
+{
+  "name": "Gulom",
+  "surname": "Urolov",
+  "phone": "555555",
+  "password": "44444",
+  "email": "urolovgulo888@gmail.com",
+  "photoId": "1daedd01-2be3-4073-b1b5-29538f510318",
+  "role": "ROLE_MODERATOR"
+}
+
+###PROFILE UPDATE
+PUT http://localhost:8081/profile/update/
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDIyNjExMzEsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyMzQ3NTMxLCJpc3MiOiJTZWN1cml0eSJ9.F138hKJDh1r_ITPaolzSnDRKkwTwFEGKPXgRqmdi7ymb308Bo7Q_njz-1BmhYSSDcGCxZwVt381IvZOrA2F_Lw
+
 ### Profile list
 GET http://localhost:8082/profile/profile_list
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDI1MzgxNzgsInBob25lIjoiKzk5ODkzMjIyMjA3NyIsInJvbGUiOiJST0xFX0FETUlOIiwiZXhwIjoxNzAyNjI0NTc4LCJpc3MiOiJTZWN1cml0eSJ9.Mslo8MMJmrKnIeewg0IEZCcUm5NcHwjo1sRGOX7HtnZSDfHGKepsXIBZ_4nMTgZV75vLPhFNdSuctp_26KweDA

@@ -1,0 +1,23 @@
+###  create saved
+POST http://localhost:8081/saved_article/create
+Content-Type: application/json
+
+{
+ "profileId":7,
+  "articleId": "ecc7102d-eb09-4c9f-85eb-d05e361eab75"
+}
+
+
+
+###  delete
+POST http://localhost:8081/saved_article/delete
+Content-Type: application/json
+
+{
+  "profileId":7,
+  "articleId": "ecc7102d-eb09-4c9f-85eb-d05e361eab75"
+}
+
+
+### list
+GET http://localhost:8081/saved_article/list

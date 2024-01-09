@@ -13,12 +13,12 @@ Content-Type: application/json
 
 
 ### Authorization user token
-POST http://localhost:8082/auth/login
+POST http://localhost:8081/auth/login
 Content-Type: application/json
 
 {
-  "phone": "3333333",
-  "password": "7777"
+  "phone": "555555",
+  "password": "44444"
 }
 
 ### Authorization Admin token

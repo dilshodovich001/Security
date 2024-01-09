@@ -5,6 +5,7 @@ import com.example.entity.CategoryEntity;
 import com.example.enums.LangEnum;
 import com.example.exp.CategoryAlreadyException;
 import com.example.exp.CategoryNotFoundException;
+import com.example.exp.ItemNotFoundException;
 import com.example.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -100,5 +101,15 @@ public class CategoryService {
             dtoList.add(dto);
         }
         return dtoList;
+    }
+    public Integer getCategoryId(Integer id){
+        if (categoryRepository.findById(id).isEmpty()) {
+            throw new ItemNotFoundException("Category not found");
+        }
+        return id;
+    }
+
+    public CategoryEntity finByKey(String key) {
+        return categoryRepository.findByKey(key);
     }
 }

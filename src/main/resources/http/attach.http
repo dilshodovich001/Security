@@ -2,9 +2,9 @@ POST http://localhost:8081/attach/upload
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary
-Content-Disposition: form-data; name="file"; filename="men.jpg"
+Content-Disposition: form-data; name="file"; filename="photo_2022-12-26_14-08-27.jpg"
 
-< C:\Users\Ma'ruf Raufov\OneDrive\Pictures\men.jpg
+< C:\Users\Ma'ruf Raufov\OneDrive\Pictures\photo_2022-12-26_14-08-27.jpg
 
 ### show images
 GET http://localhost:8081/attach/open/c5edd0ea-df7f-4978-8d3f-e2248dbe2f68

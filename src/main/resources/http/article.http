@@ -1,0 +1,88 @@
+### create article
+POST http://localhost:8081/article/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDMyNDIzMzUsInBob25lIjoiNTU1NTU1Iiwicm9sZSI6IlJPTEVfTU9ERVJBVE9SIiwiZXhwIjoxNzAzMzI4NzM1LCJpc3MiOiJTZWN1cml0eSJ9.9OrQmXV4xR3to6_6GHb6nBuE49VX70mEMyFRPsk7hG2ldIOPfQ08ZNbml5VTDQUDTEWTaaqs24I_lJxbYVOpMQ
+
+{
+  "title": "raqam lar ",
+  "description": "fffffffffffff",
+  "content": "i🤨i🤨i🤨i🤨",
+  "imageId": "1d22aedd01-2be3-4073-b1b5-29538f510318",
+  "regionId": 1,
+  "categoryId": 1
+}
+
+### update
+PUT http://localhost:8081/article/update/d6fe5c28-a264-463c-ada5-4368b204d57c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDMyNDIzMzUsInBob25lIjoiNTU1NTU1Iiwicm9sZSI6IlJPTEVfTU9ERVJBVE9SIiwiZXhwIjoxNzAzMzI4NzM1LCJpc3MiOiJTZWN1cml0eSJ9.9OrQmXV4xR3to6_6GHb6nBuE49VX70mEMyFRPsk7hG2ldIOPfQ08ZNbml5VTDQUDTEWTaaqs24I_lJxbYVOpMQ
+
+{
+  "title": "qizla kursi",
+  "description": "qizlar mazgi ",
+  "content": "7777",
+  "sharedCount": 100,
+  "imageId": "83e8c09b-0184-4dd2-aead-69120c8a9857",
+  "regionId": 1,
+  "categoryId": 1
+}
+
+### delete
+DELETE http://localhost:8081/article/delete?id=d6fe5c28-a264-463c-ada5-4368b204d57c
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDMyNDIzMzUsInBob25lIjoiNTU1NTU1Iiwicm9sZSI6IlJPTEVfTU9ERVJBVE9SIiwiZXhwIjoxNzAzMzI4NzM1LCJpc3MiOiJTZWN1cml0eSJ9.9OrQmXV4xR3to6_6GHb6nBuE49VX70mEMyFRPsk7hG2ldIOPfQ08ZNbml5VTDQUDTEWTaaqs24I_lJxbYVOpMQ
+
+
+### status
+PUT http://localhost:8081/article/status?id=d6fe5c28-a264-463c-ada5-4368b204d57c&status=PUBLISHED
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDMyNDIzMzUsInBob25lIjoiNTU1NTU1Iiwicm9sZSI6IlJPTEVfTU9ERVJBVE9SIiwiZXhwIjoxNzAzMzI4NzM1LCJpc3MiOiJTZWN1cml0eSJ9.9OrQmXV4xR3to6_6GHb6nBuE49VX70mEMyFRPsk7hG2ldIOPfQ08ZNbml5VTDQUDTEWTaaqs24I_lJxbYVOpMQ
+
+
+###  last five
+GET http://localhost:8081/article/last?status=PUBLISHED
+
+
+
+
+### last eight
+POST http://localhost:8081/article/last_eight
+Content-Type: application/json
+
+[
+  "3c790082-7df7-433f-91c0-937f2a340338",
+  "adfc9211-0d4e-484f-ae27-40d97eabf570",
+  "b7047c29-4d01-47eb-8913-de5b1608b5b2"
+]
+
+
+###  8 article
+GET http://localhost:8081/article/ecc7102d-eb09-4c9f-85eb-d05e361eab75
+Accept-Language: RU
+
+###  get las four
+GET http://localhost:8081/article/last_four/90ef4fea-5203-491e-8f03-ae2f910d848f
+
+
+
+###  most reads view count max limit 4
+GET http://localhost:8081/article/most_reads
+
+### last 5 region key
+GET http://localhost:8081/article/get_five/region/dfffffffffff
+
+
+### page article region key
+GET http://localhost:8081/article/get_five/region/page?page=0&size=1&key=dfffffffffff
+
+
+###  last 5  category key
+GET http://localhost:8081/article/get_five/category/7777777
+
+### page article category key
+GET http://localhost:8081/article/get_five/category/page?page=0&size=1&key=0000000
+
+
+### view Count
+GET http://localhost:8081/article/view_count/f95b5eb7-e58c-4cb6-b62d-7420929dfe4b
+
+### share count
+GET http://localhost:8081/article/share_count/f95b5eb7-e58c-4cb6-b62d-7420929dfe4b

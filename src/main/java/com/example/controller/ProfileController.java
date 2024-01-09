@@ -4,9 +4,10 @@ package com.example.controller;
 import com.example.dto.ProfileDTO;
 import com.example.dto.ProfileFilterDTO;
 import com.example.dto.ProfileRoleDTO;
-import com.example.enums.ProfileRole;
+
 import com.example.service.ProfileService;
-import jakarta.servlet.http.HttpServletRequest;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,6 +22,17 @@ import java.util.List;
 @RequestMapping("/profile")
 public class ProfileController {
     private final ProfileService profileService;
+    @PostMapping("/create")
+    public ResponseEntity<ProfileDTO> save(@RequestBody ProfileDTO profileDTO) {
+        ProfileDTO profile = profileService.create(profileDTO);
+        return ResponseEntity.ok(profile);
+    }
+
+    @PutMapping(value = "/update/{id}")
+    public ResponseEntity<ProfileDTO> update(@RequestBody ProfileDTO dto,
+                                             @RequestParam Long id){
+        return ResponseEntity.ok(profileService.update(dto));
+    }
 
     @GetMapping("/profile_list")
     @PreAuthorize("hasRole('ROLE_ADMIN')")

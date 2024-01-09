@@ -1,0 +1,30 @@
+### create like
+POST http://localhost:8081/article_like/create
+Content-Type: application/json
+
+{
+  "profileId": 7,
+  "articleId": "cf866b8a-1c9d-4606-b011-8a825be8615e",
+  "status": "LIKE"
+}
+
+### update like
+POST http://localhost:8081/article_like/update
+Content-Type: application/json
+
+{
+  "profileId": 7,
+  "articleId": "cf866b8a-1c9d-4606-b011-8a825be8615e",
+  "status": "DISLIKE"
+}
+
+### delete like
+POST http://localhost:8081/article_like/delete
+Content-Type: application/json
+
+{
+  "profileId": 7,
+  "articleId": "ecc7102d-eb09-4c9f-85eb-d05e361eab75"
+}
+
+

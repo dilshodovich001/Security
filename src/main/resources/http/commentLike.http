@@ -1,0 +1,30 @@
+### create like
+POST http://localhost:8081/comment_like/create
+Content-Type: application/json
+
+{
+  "profileId": 7,
+  "commentId": 14,
+  "status": "LIKE"
+}
+
+### update like
+POST http://localhost:8081/comment_like/update
+Content-Type: application/json
+
+{
+  "profileId": 7,
+  "commentId": 14,
+  "status": "DISLIKE"
+}
+
+### delete like
+POST http://localhost:8081/comment_like/delete
+Content-Type: application/json
+
+{
+  "profileId": 7,
+  "commentId": 14
+}
+
+

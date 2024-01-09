@@ -2,9 +2,7 @@ package com.example.controller;
 
 import com.example.dto.ArticleTypeDTO;
 import com.example.enums.LangEnum;
-import com.example.enums.ProfileRole;
 import com.example.service.ArticleTypeService;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -23,6 +21,11 @@ public class ArticleTypeController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ArticleTypeDTO> create(@RequestBody ArticleTypeDTO dto) {
         return ResponseEntity.ok(articleTypeService.create(dto));
+    }
+    @DeleteMapping(value = "/delete/id")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> delete(@PathVariable Long id){
+       return ResponseEntity.ok(articleTypeService.delete(id));
     }
 
     @PutMapping("/admin/{id}")
@@ -47,5 +50,6 @@ public class ArticleTypeController {
         return ResponseEntity.ok(response);
 
     }
+
 
 }

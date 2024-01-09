@@ -24,6 +24,8 @@ public class ProfileDTO {
     private String password;
 
     private String email;
+    private String photoId;
+
 
 
     private ProfileRole role;
@@ -31,4 +33,5 @@ public class ProfileDTO {
     private ProfileStatus status;
     private LocalDateTime createdDate;
     private Boolean visible;
+    private AttachDTO attachDTO;
 }
